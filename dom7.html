@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Checker</title>
+</head>
+<body>
+
+    <h2>Weather Checker</h2>
+
+    <button onclick="checkTemperature()">Check Temperature</button>
+
+    <h3 id="output"></h3>
+
+    <script>
+        function checkTemperature() {
+            let temp = Number(prompt("Enter today's temperature:"));
+
+            if (temp > 30) {
+                document.getElementById("output").innerHTML = "Hot Day";
+            } else {
+                document.getElementById("output").innerHTML = "Pleasant Weather";
+            }
+        }
+    </script>
+
+</body>
+</html>                      g        

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result and Grade</title>
+</head>
+<body>
+
+    <button onclick="showResult()">Result</button>
+    <button onclick="showGrade()">Grade</button>
+
+    <h3 id="result"></h3>
+    <h3 id="grade"></h3>
+
+    <script>
+        let marks = 0;
+
+        function showResult() {
+            marks = Number(prompt("Enter your marks:"));
+
+            if (marks >= 35) {
+                document.getElementById("result").innerHTML = "Result: Pass";
+            } else {
+                document.getElementById("result").innerHTML = "Result: Fail";
+            }
+        }
+
+        function showGrade() {
+            let grade;
+
+            if (marks >= 90)
+                grade = "A+";
+            else if (marks >= 80)
+                grade = "A";
+            else if (marks >= 70)
+                grade = "B";
+            else if (marks >= 60)
+                grade = "C";
+            else if (marks >= 35)
+                grade = "D";
+            else
+                grade = "No Grade";
+
+            document.getElementById("grade").innerHTML = "Grade: " + grade;
+        }
+    </script>
+
+</body>
+</html>
